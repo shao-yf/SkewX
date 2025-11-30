@@ -1,7 +1,7 @@
 process MINIMAP2 {
     tag "$meta.id"
+    container "oras://community.wave.seqera.io/library/minimap2_samtools:054fc17315196ad6"
     label 'process_high'
-    //conda "bioconda::minimap2=2.17" // find environment or container that has both samtools and minimap2
 
     input:
     tuple val(meta), path(input_file) // meta keeps track of individual + their tissue samples
